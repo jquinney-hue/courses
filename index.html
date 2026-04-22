@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHNCC Educational Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen" class="container active">
+        <h2>JHNCC Educational Platform</h2>
+        <p>Please sign in with your school email (@jhncc.org)</p>
+        <button id="login-btn">Sign In with Google</button>
+        <p id="login-error" class="error"></p>
+    </div>
+
+    <div id="app-screen" class="container hidden">
+        <nav class="navbar">
+            <div class="nav-left">
+                <h1>JHNCC Portal</h1>
+                <select id="year-group-select">
+                    <option value="" disabled selected>Select Year Group</option>
+                    <option value="7">Year 7</option>
+                    <option value="8">Year 8</option>
+                    <option value="9">Year 9</option>
+                    <option value="10">Year 10</option>
+                    <option value="11">Year 11</option>
+                    <option value="12">Year 12</option>
+                    <option value="13">Year 13</option>
+                </select>
+            </div>
+            <div class="nav-right">
+                <span id="user-display"></span>
+                <button id="logout-btn">Sign Out</button>
+            </div>
+        </nav>
+
+        <main>
+            <div id="course-list-container">
+                <h3>Select a year group to view available courses.</h3>
+            </div>
+
+            <div id="lesson-container" class="hidden">
+                <button id="back-to-courses-btn">← Back to Courses</button>
+                <div id="injected-lesson-content"></div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
